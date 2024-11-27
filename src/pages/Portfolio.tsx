@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageHeader } from '../components/PageHeader';
 import { motion } from 'framer-motion';
 
 export const Portfolio:React.FC = () => {
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const categories = ['All', 'Residential', 'Commercial', 'Historical'];
   const [activeCategory, setActiveCategory] = useState('All');
 
